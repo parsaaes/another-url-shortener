@@ -50,6 +50,7 @@ func (f FullURLHandler) Shorten(w http.ResponseWriter, r *http.Request) {
 }
 
 func (f FullURLHandler) jsonResponse(w http.ResponseWriter, key string, message string, status int) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
 	err := json.NewEncoder(w).Encode(map[string]string{key: message})

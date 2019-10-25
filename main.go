@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
+	server.SetupFront()
 	server.StartServer()
 }

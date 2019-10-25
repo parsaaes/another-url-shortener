@@ -27,3 +27,11 @@ func StartServer() {
 	logrus.Println("Server started...")
 	logrus.Fatal(http.ListenAndServe(":"+strconv.Itoa(config.Cfg.Port), nil))
 }
+
+func SetupFront() {
+	http.HandleFunc("/url-shortener", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "front/index.html")
+	})
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("front/js"))))
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("front/css"))))
+}

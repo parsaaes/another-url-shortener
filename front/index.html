@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Url Shortener</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link type="text/css" sizes="576x576" rel="apple-touch-icon-precomposed" href="images/webclip.png?v=1" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+  <script
+			  src="js/index.js"></script>
+  <style>
+
+@media only screen and (min-width: 550px) {
+  html, body, .container, .row, .column {
+    height: 100%;
+  }
+  .col {
+      position: relative;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+}
+    body {
+      background-color:#2f3446 !important;
+    }
+
+    .intro {
+      font-family: 'Pacifico';
+    }
+
+    .col {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .arrow {
+      display: none;
+      color: rgb(240, 240, 240);
+      text-align: center;
+      font-size: 15em;
+      text-shadow: 4px 4px 5px #21242e;
+    }
+    .result {
+      display: none;
+      background: #21242e;
+      border: 1px solid #42485c;
+      border-radius: 5px;
+      color: rgb(240, 240, 240);
+      padding: 12px;
+    }
+
+    .input {
+      background: rgb(240, 240, 240);
+      margin: 0;
+      border-radius: 5px;
+      height: 60px !important;
+      border: 0px solid #42485c !important;
+      width: 90%;
+    }
+
+    #notif {
+      display: none;
+      border-top-right-radius: 5px;
+      position: fixed;
+      left: 0px;
+      bottom:0px;
+      background: rgb(255, 75, 75);
+    }
+  </style>
+
+
+
+</head>
+<body>
+
+  <div class="container">
+      <div class="row">
+      <div class="one-third column">
+        <div class="col">
+        <form id="url-form">
+           <input id="url" class="input" placeholder="Enter url and press enter" type="text" name="url"><br>
+        </form> 
+      </div>
+      </div>
+      <div class="one-third column">
+        <div class="col">
+            <i id="arrow" class="arrow material-icons">
+                keyboard_arrow_right
+          </i>
+        </div>
+      </div>
+      <div class="one-third column">
+          <div id="result" class="result col">
+        third
+        </div>
+      </div>
+    </div>
+  </div>
+  <span id="notif">401</span>
+</body>
+</html>
