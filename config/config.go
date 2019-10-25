@@ -14,7 +14,7 @@ type (
 		User string `mapstructure:"user" validate:"required"`
 		Pass string `mapstructure:"pass" validate:"required"`
 		Host string `mapstructure:"host" validate:"required"`
-		Port string `mapstructure:"port" validate:"required"`
+		Port int    `mapstructure:"port" validate:"required"`
 	}
 
 	Config struct {
